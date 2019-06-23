@@ -27,6 +27,16 @@ install:
 	cp $(TARGET) /usr/bin/
 	cp 80-dvorak.rules /etc/udev/rules.d/
 	cp dvorak@.service /etc/systemd/system/
+	sudo udevadm control --reload-rules
+	sudo udevadm trigger
+	sudo systemctl restart udev.service
+	systemctl daemon-reload
+	systemctl start dvorak@event3.service
+remove:
+	systemctl stop dvorak@event3.service
+	rm -f /usr/bin/$(TARGET)
+	rm -f /etc/udev/rules.d/80-dvorak.rules 
+	rm -f /etc/systemd/system/dvorak@.service
 	sudo udevadm control --reload
 	sudo systemctl restart udev.service
 	systemctl daemon-reload

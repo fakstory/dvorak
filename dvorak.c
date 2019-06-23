@@ -109,76 +109,78 @@ static int modifier_bit(int key) {
 //from: https://github.com/kentonv/dvorak-qwerty/tree/master/unix
 static int qwerty2dvorak(int key) {
     switch (key) {
-        case 12:
-            return 40;
-        case 13:
-            return 27;
-        case 16:
-            return 45;
-        case 17:
-            return 51;
-        case 18:
-            return 32;
-        case 19:
-            return 24;
-        case 20:
-            return 37;
-        case 21:
-            return 20;
-        case 22:
-            return 33;
-        case 23:
-            return 34;
-        case 24:
-            return 31;
-        case 25:
-            return 19;
-        case 26:
+        case 9://ctrl+- (=)
             return 12;
-        case 27:
+        case 8:
             return 13;
-        case 30:
-            return 30;
-        case 31:
-            return 39;
-        case 32:
-            return 35;
-        case 33:
-            return 21;
-        case 34:
-            return 22;
-        case 35:
-            return 36;
-        case 36:
-            return 46;
-        case 37:
-            return 47;
-        case 38:
-            return 25;
-        case 39:
-            return 44;
-        case 40:
-            return 16;
-        case 44:
-            return 53;
-        case 45:
-            return 48;
-        case 46:
-            return 23;
-        case 47:
-            return 52;
         case 48:
-            return 49;
-        case 49:
-            return 38;
-        case 50:
-            return 50;
-        case 51:
+            return 16;
+        case 27://
             return 17;
-        case 52:
+        case 25://ctrl+f (e)
             return 18;
-        case 53:
+        case 24:
+            return 19;
+        case 20://è
+            return 20;
+        case 7://^
+            return 21;
+        case 47://v
+            return 22;
+        case 32://d
+            return 23;
+        case 38://l
+            return 24;
+        case 36://t
+            return 25;
+        case 44://z
             return 26;
+        case 17://w
+            return 27;
+        case 30://a
+            return 30;
+        case 22://u
+            return 47;
+        case 23://i
+            return 32;
+        case 18://e
+            return 33;
+        case 51://,
+            return 34;
+        case 46://c
+            return 35;
+        case 43://t
+            return 20;
+        case 31://s
+            return 37;
+        case 19://r
+            return 38;
+        case 49://n
+            return 39;
+        case 50://m
+            return 40;
+        case 40://à
+            return 44;
+        case 21://y
+            return 45;
+        case 45://x
+        // Real location of the key "C"
+        // 23, position of querty location of the bepo letter key "Y"
+            return 46;
+        case 52://.
+            return 47;
+        case 37://k
+            return 48;
+        case 53://'
+            return 49;
+        case 16://q
+            return 50;
+        case 34://g
+            return 51;
+        case 35://h
+            return 52;
+        case 33://f
+            return 53;
     }
     return key;
 }
