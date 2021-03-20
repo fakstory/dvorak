@@ -2,6 +2,6 @@
 Description=Dvorak Virtual Keyboard
 
 [Service]
-ExecStart=/usr/local/bin/dvorak /dev/input/%i keyb k360 k750 & setxkbmap -I ~/.xkb bepo_code.xkb -print | xkbcomp -I${HOME}/.xkb/ - ${DISPLAY}
+ExecStart=/usr/local/bin/dvorak /dev/input/event3 keyb k360 k750 & setxkbmap -I ~/.xkb bepo_code.xkb -print | xkbcomp -I${HOME}/.xkb/ - ${DISPLAY}
 [Install]
 WantedBy=multi-user.target
